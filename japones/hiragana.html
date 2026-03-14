@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudio de Hiragana</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Estudio de Hiragana</h1>
+        <div class="row mt-5">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Hiragana</h5>
+                        <p class="card-text hiragana-display" style="font-size: 1.5rem;"></p>
+                        <div class="col-md-12 text-center" style="margin: 1rem;">
+                            <button class="btn btn-primary new-hiragana-btn">Nuevo Hiragana</button>
+                            <button class="btn btn-primary show-answer-btn">Mostrar Respuesta</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Romaji</h5>
+                        <input type="text" class="form-control romaji-input" placeholder="Introduce el romaji aquí">
+                        <p class="mt-3 romaji-ok text-success d-none">OK</p>
+                        <p class="mt-3 answer-display text-info d-none"></p>
+                        <div class="countdown"></div>
+                        <p class="score" style="margin-top: 1rem;">Aciertos: 0</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-md-12">
+                <h5 style="display: inline;">Número de hiraganas a mostrar: </h5>
+                <input type="number" id="hiragana-count" min="1" value="1">
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-md-12">
+                <h5>Selecciona los hiraganas a practicar</h5>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="v" value="v">
+                    <label class="form-check-label" for="k">vocales</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="k" value="k">
+                    <label class="form-check-label" for="k">k</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="s" value="s">
+                    <label class="form-check-label" for="s">s</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="t" value="t">
+                    <label class="form-check-label" for="t">t</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="n" value="n">
+                    <label class="form-check-label" for="n">n</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="h" value="h">
+                    <label class="form-check-label" for="h">h</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="m" value="m">
+                    <label class="form-check-label" for="m">m</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="y" value="y">
+                    <label class="form-check-label" for="y">y</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="r" value="r">
+                    <label class="form-check-label" for="r">r</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="w" value="w">
+                    <label class="form-check-label" for="w">w</label>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/wanakana"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', function () {
+            var hiraganas = Object.keys(hiraganaRomaji);
+            var randomIndex = Math.floor(Math.random() * hiraganas.length);
+            var randomHiragana = hiraganas[randomIndex];
+            hiraganaDisplay.textContent = randomHiragana;
+        });
+        var hiraganaRomaji = { 'あ': 'a', 'い': 'i', 'う': 'u', 'え': 'e', 'お': 'o', 'か': 'ka', 'き': 'ki', 'く': 'ku', 'け': 'ke', 'こ': 'ko', 'さ': 'sa', 'し': 'shi', 'す': 'su', 'せ': 'se', 'そ': 'so', 'た': 'ta', 'ち': 'chi', 'つ': 'tsu', 'て': 'te', 'と': 'to', 'な': 'na', 'に': 'ni', 'ぬ': 'nu', 'ね': 'ne', 'の': 'no', 'は': 'ha', 'ひ': 'hi', 'ふ': 'fu', 'へ': 'he', 'ほ': 'ho', 'ま': 'ma', 'み': 'mi', 'む': 'mu', 'め': 'me', 'も': 'mo', 'や': 'ya', 'ゆ': 'yu', 'よ': 'yo', 'ら': 'ra', 'り': 'ri', 'る': 'ru', 'れ': 're', 'ろ': 'ro', 'わ': 'wa', 'を': 'wo', 'ん': 'n' };
+
+        var hiraganaDisplay = document.querySelector('.hiragana-display');
+        var romajiInput = document.querySelector('.romaji-input');
+        var romajiOk = document.querySelector('.romaji-ok');
+        var score = 0;
+        var scoreDisplay = document.querySelector('.score');
+        var countdownInterval;
+
+        romajiInput.addEventListener('input', function () {
+            var inputRomaji = romajiInput.value;
+            var displayedHiraganas = hiraganaDisplay.textContent.split('');
+            var displayedRomaji = displayedHiraganas.map(function (hiragana) {
+                return hiraganaRomaji[hiragana];
+            }).join('');
+
+            if (displayedRomaji === inputRomaji) {
+                romajiOk.classList.remove('d-none');
+                score++;
+                scoreDisplay.textContent = 'Aciertos: ' + score;
+
+                var countdown = 2;
+                var countdownDisplay = document.querySelector('.countdown');
+                countdownDisplay.textContent = 'Siguiente hiragana en: ' + countdown;
+
+                countdownInterval = setInterval(function () {
+                    countdown--;
+                    countdownDisplay.textContent = 'Siguente hiragana en: ' + countdown;
+
+                    if (countdown === 0) {
+                        clearInterval(countdownInterval);
+                        countdownDisplay.textContent = '';
+                        romajiOk.classList.add('d-none');
+                        answerDisplay.textContent = '';
+                        newHiraganaBtn.click();
+                    }
+                }, 1000);
+            } else {
+                romajiOk.classList.add('d-none');
+            }
+        });
+        var newHiraganaBtn = document.querySelector('.new-hiragana-btn');
+
+        var checkboxHiraganaMap = {
+            'v': ['あ', 'い', 'う', 'え', 'お'],
+            'k': ['か', 'き', 'く', 'け', 'こ'],
+            's': ['さ', 'し', 'す', 'せ', 'そ'],
+            't': ['た', 'ち', 'つ', 'て', 'と'],
+            'n': ['な', 'に', 'ぬ', 'ね', 'の'],
+            'h': ['は', 'ひ', 'ふ', 'へ', 'ほ'],
+            'm': ['ま', 'み', 'む', 'め', 'も'],
+            'y': ['や', 'ゆ', 'よ'],
+            'r': ['ら', 'り', 'る', 'れ', 'ろ'],
+            'w': ['わ', 'を', 'ん'],
+        };
+        var hiraganaCountInput = document.getElementById('hiragana-count');
+        newHiraganaBtn.addEventListener('click', function () {
+            var selectedCheckboxes = document.querySelectorAll('input[type="checkbox"]:checked');
+            var selectedHiraganas = [];
+
+            selectedCheckboxes.forEach(function (checkbox) {
+                var hiraganasForCheckbox = checkboxHiraganaMap[checkbox.value];
+
+                if (hiraganasForCheckbox) {
+                    selectedHiraganas = selectedHiraganas.concat(hiraganasForCheckbox);
+                }
+            });
+
+            if (selectedHiraganas.length > 0) {
+                var newHiraganas = [];
+                var numberOfHiraganas = parseInt(hiraganaCountInput.value);
+
+                for (var i = 0; i < numberOfHiraganas; i++) {
+                    var randomIndex = Math.floor(Math.random() * selectedHiraganas.length);
+                    var newHiragana = selectedHiraganas[randomIndex];
+
+                    newHiraganas.push(newHiragana);
+                }
+
+                hiraganaDisplay.textContent = newHiraganas.join('');
+                romajiOk.classList.add('d-none');
+                romajiInput.value = '';
+                answerDisplay.classList.add('d-none');
+            } else {
+                alert('Por favor, selecciona al menos un checkbox.');
+            }
+        });
+        var showAnswerBtn = document.querySelector('.show-answer-btn');
+        var answerDisplay = document.querySelector('.answer-display');
+
+        showAnswerBtn.addEventListener('click', function () {
+            var currentHiraganas = hiraganaDisplay.textContent.split('');
+            var answers = currentHiraganas.map(function (hiragana) {
+                return hiraganaRomaji[hiragana];
+            });
+
+            answerDisplay.textContent = 'La respuesta es: ' + answers.join(', ');
+            answerDisplay.classList.remove('d-none');
+        });
+
+        // Select the checkbox for vowels
+        var vowelsCheckbox = document.getElementById('v');
+        vowelsCheckbox.checked = true;
+    </script>
+    </script>
+</body>
+
+</html>

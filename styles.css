@@ -1,0 +1,7 @@
+.card-hover {
+    transition: transform 0.3s ease-in-out; /* Asegura una transición suave */
+}
+
+.card-hover:hover {
+    transform: scale(1.05); /* Aumenta el tamaño de la tarjeta en un 5% */
+}

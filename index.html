@@ -1,82 +1,512 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="es">
+
 <head>
-<meta charset="utf-8">
-<title>Ivan Pico Matin</title>
-<meta name="description" content="Ivan Pico Martin, Senior Technologist.">
-<meta name="author" content="Ivan Pico Martin">
-<style>
-        html {
-            background: black url("static/Prek.jpg") no-repeat left center fixed;
-            -webkit-background-size: cover;
-            -moz-background-size: cover;
-            -o-background-size: cover;
-            background-size: cover;
-        }
-
-        body {
-            margin: 0px;
-            font-family: monospace;
-        }
-
-        a:link,
-        a:visited,
-        a:hover,
-        a:active {
-            color: #eee;
-        }
-
-        #main {
-            position: fixed;
-            bottom: 5em;
-            width: 100%;
-            background-color: black;
-            opacity: 0.7;
-            color: #ccc;
-            padding: 2em;
-        }
-
-        p {
-            font-size: 1.2em;
-        }
-    </style>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z20NY9303X"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-Z20NY9303X');
-</script>
-<script type="application/ld+json">
-    {
-      "@context": "http://schema.org",
-      "@type": "Person",
-      "name": "Ivan Pico Martin",
-      "url": "https://www.ivanpico.com",
-      "sameAs": [
-        "https://www.linkedin.com/in/ivanpico/"
-      ]
-    }
-    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ivan Picó</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/favicon/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
 </head>
+
 <body>
-<div id="main">
-<h1>Ivan Pico Martin</h1>
-<hr/>
-<p>I’m a big fan of nature, mountain, snow and a mobility enthusiast as well.</p>
-<p>&nbsp;<i class="fa fa-link" aria-hidden="true"></i>&nbsp;
-<i class="fa fa-linkedin" aria-hidden="true"></i> <a href="https://www.linkedin.com/in/ivanpico/">LinkedIn</a> 
-</p>
-</div>
-<script type="text/javascript">
-        (function () {
-            var css = document.createElement('link');
-            css.href = 'font-awesome/css/font-awesome.min.css';
-            css.rel = 'stylesheet';
-            css.type = 'text/css';
-            document.getElementsByTagName('head')[0].appendChild(css);
-        })();
-    </script>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="https://www.linkedin.com/in/ivanpico" target="_blank"
+                        rel="noopener noreferrer">
+                        <i class="fab fa-linkedin icon-large" style="font-size: 24px;"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#proyectos">Experience</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About Me</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contacto">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="introduccion" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4" style=" margin-bottom: 2rem;">
+                    <a href="about.html">
+                        <img src="images/ivanpico_rounded.png" alt="Ivan Picó" class="img-fluid"
+                            style="max-height: 80px;">
+                        <h5 style="display: inline; color: black; margin-left: 1rem;">Ivan Picó</h5>
+                    </a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-8">
+                    <h2>Product Owner</h2>
+                    <p style="text-align: justify;">
+                        I've found fulfillment in guiding IT projects to success, sharing valuable experiences and
+                        learning from people.<br>
+                        I enjoy helping organizations and tech leads to define their product strategy and roadmap.<br>
+                        I adapt my skills to meet evolving needs, whether technical or organizational and I like
+                        contribute my expertise to projects at any stage.
+                    </p>
+                </div>
+            </div>
+            <div class="row" style="padding-top: 1rem;">
+                <a class="nav-link" href="https://www.linkedin.com/in/ivanpico" target="_blank"
+                    rel="noopener noreferrer">
+                    <i class="fab fa-linkedin icon-large" style="font-size: 32px; color: rgb(0, 56, 151);"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Projects Section -->
+    <section id="proyectos" class="py-5">
+        <div class="container">
+            <h2 style="padding-bottom: 1rem;">Experience</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card mb-4 card-hover" data-toggle="modal" data-target="#cybersecurityApp"
+                        style="cursor: pointer;">
+                        <div class="d-none d-md-block">
+                            <img src="images/ciberseguridad.jpg" class="card-img-top" alt="Cybersecurity">
+                            <div class="card-body">
+                                <h5 class="card-title">Cybersecurity in Banking Mobile Application</h5>
+                                <!-- Project 2 Description -->
+                                <p class="card-text">Implementation of security solutions for a banking mobile
+                                    application.</p>
+                                <ul>
+                                    <li>Analyze vulnerabilities and threats.</li>
+                                    <li>Develop solutions to mitigate vulnerabilities.</li>
+                                    <li>Work with other teams to implement security measures.</li>
+                                    <li>Perform penetration testing and security assessments.</li>
+                                    <li>Provide training on security to employees and customers.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="d-block d-md-none">
+                            <img src="images/it.jpg" class="card-img-top" alt="Agile Project Management">
+                            <div class="card-body">
+                                <h5 class="card-title">Agile Project Management Product Owner</h5>
+                                <!-- Project Description -->
+                                <p class="card-text">Develop an Agile Project Management solution to streamline project
+                                    workflows and enhance team collaboration.</p>
+                                <p>Operating within this Product Owner role involved performing all functions required
+                                    for
+                                    project development, such as:</p>
+                                <ul>
+                                    <li>Defining the product vision and roadmap</li>
+                                    <li>Prioritizing product features and backlog items</li>
+                                    <li>Acting as a liaison between the development team and stakeholders</li>
+                                    <li>Ensuring the product meets the needs of the users and stakeholders</li>
+                                    <li>Conducting market research and user feedback sessions</li>
+                                    <li>Collaborating with UX/UI designers to create user-friendly interfaces</li>
+                                    <li>Overseeing the product lifecycle from conception to launch</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card mb-4 card-hover" data-toggle="modal" data-target="#agileProjectManagement"
+                        style="cursor: pointer;">
+
+                        <div class="d-block d-md-none">
+                            <img src="images/ciberseguridad.jpg" class="card-img-top" alt="Cybersecurity">
+                            <div class="card-body">
+                                <h5 class="card-title">Cybersecurity in Banking Mobile Application</h5>
+                                <!-- Project 2 Description -->
+                                <p class="card-text">Implementation of security solutions for a banking mobile
+                                    application.</p>
+                                <ul>
+                                    <li>Analyze vulnerabilities and threats.</li>
+                                    <li>Develop solutions to mitigate vulnerabilities.</li>
+                                    <li>Work with other teams to implement security measures.</li>
+                                    <li>Perform penetration testing and security assessments.</li>
+                                    <li>Provide training on security to employees and customers.</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                        <div class="d-none d-md-block">
+                            <img src="images/it.jpg" class="card-img-top" alt="Agile Project Management">
+                            <div class="card-body">
+                                <h5 class="card-title">Agile Project Management Product Owner</h5>
+                                <!-- Project Description -->
+                                <p class="card-text">Develop an Agile Project Management solution to streamline project
+                                    workflows and enhance team collaboration.</p>
+                                <p>Operating within this Product Owner role involved performing all functions required
+                                    for
+                                    project development, such as:</p>
+                                <ul>
+                                    <li>Defining the product vision and roadmap</li>
+                                    <li>Prioritizing product features and backlog items</li>
+                                    <li>Acting as a liaison between the development team and stakeholders</li>
+                                    <li>Ensuring the product meets the needs of the users and stakeholders</li>
+                                    <li>Conducting market research and user feedback sessions</li>
+                                    <li>Collaborating with UX/UI designers to create user-friendly interfaces</li>
+                                    <li>Overseeing the product lifecycle from conception to launch</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-md-4">
+                    <div class="card mb-4 card-hover" data-toggle="modal" data-target="#travelPlanner"
+                        style="cursor: pointer;">
+                        <img src="images/appMomentsDesktop.png" class="card-img-top" alt="Project 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Solution Architect for a Travel Advisory Agency</h5>
+                            <!-- Project 1 Description -->
+                            <p class="card-text">Build Moments Travel Planner, an App with AI in order to manage their
+                                customers travel itinerary.</p>
+                            <p>Operating within this fullstack role involved performing all functions required for
+                                project development, such as:</p>
+                            <ul>
+                                <li>Solution Architect</li>
+                                <li>Product Owner</li>
+                                <li>Frontend and Backend Developer</li>
+                                <li>Database Designer</li>
+                                <li>Security Specialist</li>
+                                <li>UX/UI designer</li>
+                                <li>QA Tester</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card mb-4 card-hover" data-toggle="modal" data-target="#aiAssistant"
+                        style="cursor: pointer;">
+                        <img src="images/appSam.png" class="card-img-top" alt="Project 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Voice AI Assistant</h5>
+                            <!-- Project 3 Description -->
+                            <p class="card-text">Assistant that responds through voice commands.</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-md-4">
+                    <div class="card mb-4 card-hover" data-toggle="modal" data-target="#generateImageApp"
+                        style="cursor: pointer;">
+                        <img src="images/appPicmaginary.png" class="card-img-top" alt="Picmaginary">
+                        <div class="card-body">
+                            <h5 class="card-title">Image Creation by AI</h5>
+                            <!-- Project 4 Description -->
+                            <p class="card-text">Simple app that allows generating images with OpenAI.</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-md-4">
+                    <div class="card mb-4 card-hover" data-toggle="modal" data-target="#bellacalabriaWeb"
+                        style="cursor: pointer;">
+                        <img src="images/webCalabria.png" class="card-img-top" alt="Picmaginary">
+                        <div class="card-body">
+                            <h5 class="card-title">AI-Generated Website</h5>
+                            <!-- Project 5 Description -->
+                            <p class="card-text">Website created without direct code modification.</p>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+
+    <div class="modal fade" id="travelPlanner" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Fullstack</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row align-items-center">
+                        <div class="col-md-6">
+                            <a href="https://app.momentstravelplanner.com" target="_blank">
+                                <img src="images/appMomentsDesktop.png" class="img-fluid" alt="Project 1">
+                            </a>
+                            <a style="margin-top: 2rem; margin-bottom: 2rem;"
+                                href="https://app.momentstravelplanner.com" target="_blank" class="btn btn-primary">Go
+                                to Website</a>
+                            <p>The advisory designs the trip in a personalized way so that you can experience
+                                unforgettable and worry-free vacations. Plan the trip with the same care, enthusiasm,
+                                and detail as if it were for yourself. Plus, you can modify it as many times as you need
+                                until you are completely satisfied.</p>
+                            <p>Design the trip exclusively for you, taking into account your needs, preferences, and
+                                interests.</p>
+                            <p class="modal-description">Discover a free trip to Vietnam with the <strong>
+                                    <a href="https://app.momentstravelplanner.com" target="_blank">"demo@ivanpico.com"
+                                        account and password 123456.</a></strong></p>
+                        </div>
+                        <div class="col-md-6 mt-4 mt-md-0">
+                            <h4>Roles in this Application Development</h4>
+                            <ul style="margin-bottom: 15px;">
+                                <li style="margin-bottom: 10px;"><strong>Implemented AI functionalities</strong> using
+                                    the OpenAI API and fined tuned.</li>
+                                <li style="margin-bottom: 10px;"><strong>Defined the product vision and
+                                        priorities</strong>. Managed and prioritized the product backlog.</li>
+                                <li style="margin-bottom: 10px;"><strong>Designed the UI/UX</strong>. Worked with
+                                    technologies like Angular, Javascript, Bootstrap.</li>
+                                <li style="margin-bottom: 10px;"><strong>Defined business logic</strong>, data
+                                    processing, and database management on the server side. Worked with technologies
+                                    like Node.js, PHP (with Laravel or Symfony), among others.</li>
+                                <li style="margin-bottom: 10px;"><strong>Designed and optimized the database
+                                        structure</strong> to ensure efficient performance and easy system scalability.
+                                    Worked with database languages and technologies like SQL and NoSQL.</li>
+                                <li style="margin-bottom: 10px;"><strong>Implemented security measures</strong> in the
+                                    application to protect it against vulnerabilities and cyber attacks.</li>
+                                <li style="margin-bottom: 10px;"><strong>Integrated the frontend and backend</strong> to
+                                    ensure the full functionality of the application.</li>
+                                <li style="margin-bottom: 10px;">Application tested to <strong>identify and fix
+                                        bugs</strong> and ensure the quality and functionality of the product.</li>
+                                <li style="margin-bottom: 10px;"><strong>Designed</strong> and oversaw the overall
+                                    structure and integration of systems to meet business requirements and objectives,
+                                    ensuring alignment with enterprise architecture standards and best practices.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="aiAssistant" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Voice AI Assistant</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row align-items-center">
+                        <div class="col-md-6">
+                            <img src="images/appSam.png" class="img-fluid" alt="Project 1">
+                        </div>
+                        <div class="col-md-6 mt-4 mt-md-0">
+                            <h3>Interaction with OpenAI's AI through Voice Commands</h3>
+                            <p class="modal-description">
+                                The web application allows users to interact with OpenAI's AI through voice commands.
+                                When a question or request is spoken, the text is displayed on screen and a voice
+                                synthesizer is used to provide the response generated by the AI. This functionality
+                                offers a unique user experience and facilitates communication with the AI in a more
+                                natural way.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="generateImageApp" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">AI-Powered Image Generation Web</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row align-items-center">
+                        <div class="col-md-6">
+                            <img src="images/appPicmaginary.png" class="img-fluid" alt="Project 1">
+                        </div>
+                        <div class="col-md-6 mt-4 mt-md-0">
+                            <h3>Web that Generates Custom Images</h3>
+                            <p class="modal-description">
+                                Web application that allows users to automatically generate images using OpenAI's AI.
+                                Users can choose from different styles and themes to create unique and personalized
+                                images.
+                            </p>
+                            <p>
+                                The application utilizes AI technology to generate realistic and high-quality images in
+                                a matter of seconds. This functionality provides users with a quick and easy way to
+                                create visual content for their projects and online posts.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="bellacalabriaWeb" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Restoration Website</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row align-items-center">
+                        <div class="col-md-6">
+                            <img src="images/webCalabria.png" class="img-fluid" alt="Project 1">
+                        </div>
+                        <div class="col-md-6 mt-4 mt-md-0">
+                            <h3>Generated and Edited with Copilot</h3>
+                            <p class="modal-description">
+                                Using text instructions, Copilot generates the code for the website and tweaks it to
+                                make it look more professional.
+                            </p>
+                            <p>The time invested in the website was less than two hours, demonstrating that with AI
+                                assistance, work is expedited and productivity is multiplied by x5.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="cybersecurityApp" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Cybersecurity Website</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row align-items-center">
+                        <div class="col-md-6">
+                            <img src="images/ciberseguridad.jpg" class="img-fluid" alt="Project 1">
+                        </div>
+                        <div class="col-md-6 mt-4 mt-md-0">
+                            <h3>Security Solutions for Banking Mobile Application</h3>
+                            <p class="modal-description">
+                            <ul>
+                                <li>Conducts comprehensive analysis of vulnerabilities and threats in the systems and
+                                    mobile applications used by the financial institution.</li>
+                                <li>Develops solutions and strategies to mitigate the identified vulnerabilities.</li>
+                                <li>Collaborates closely with other teams, such as software developers to implement
+                                    effective security measures and ensure compliance with security standards and
+                                    regulations.</li>
+                                <li>Performs penetration testing and security assessments to identify possible weak
+                                    points and enhance the resilience of systems against potential cyber attacks.</li>
+                                <li>Provides training and awareness on security to software developers.</li>
+                            </ul>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="agileProjectManagement" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Agile Project Management Product Owner</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row align-items-center">
+                        <div class="col-md-6">
+                            <img src="images/it.jpg" class="img-fluid" alt="Agile Project Management">
+                        </div>
+                        <div class="col-md-6 mt-4 mt-md-0">
+                            <h3>Product Owner Responsibilities</h3>
+                            <p class="modal-description">
+                            <ul>
+                                <li>Prioritize features and backlog items based on business value and customer needs.
+                                </li>
+                                <li>Define the product vision and roadmap, making sure it aligns with the company's
+                                    goals.</li>
+                                <li>Act as a bridge between the development team and stakeholders, ensuring everyone is
+                                    on the same page.</li>
+                                <li>Get feedback from users and stakeholders to make necessary adjustments and
+                                    improvements.</li>
+                                <li>Use user feedback sessions to validate product ideas and features.</li>
+                                <li>Work with UX/UI designers to create user-friendly interfaces that enhance the user
+                                    experience.</li>
+                                <li>Manage the product lifecycle from start to finish, ensuring timely delivery and
+                                    high-quality standards.</li>
+                            </ul>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section id="contacto" class="bg-light py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Contact</h2>
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <div class="social-media">
+                        <a href="https://www.linkedin.com/in/ivanpico" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-linkedin" style="font-size: 32px;"> </i>
+                        </a>
+                    </div>
+                    <div id="email-container"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="email.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
+
 </html>
