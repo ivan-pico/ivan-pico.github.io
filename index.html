@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -14,25 +13,12 @@
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
-    <link rel="apple-touch-icon"
-        sizes="180x180"
-        href="/favicon/apple-touch-icon.png">
-
-    <link rel="icon"
-        type="image/png"
-        sizes="32x32"
-        href="/favicon/favicon-32x32.png">
-
-    <link rel="icon"
-        type="image/png"
-        sizes="16x16"
-        href="/favicon/favicon-16x16.png">
-
-    <link rel="manifest"
-        href="/favicon/site.webmanifest">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/favicon/site.webmanifest">
 
     <meta name="theme-color" content="#ffffff">
-
 
     <style>
 
@@ -48,44 +34,37 @@
             --max-width: 1120px;
         }
 
-
         * {
             box-sizing: border-box;
         }
-
 
         html {
             scroll-behavior: smooth;
         }
 
-
         body {
             margin: 0;
-            font-family: -apple-system,
-                BlinkMacSystemFont,
-                "Segoe UI",
-                Roboto,
-                Helvetica,
-                Arial,
-                sans-serif;
-
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+                Roboto, Helvetica, Arial, sans-serif;
             color: var(--text);
             background: var(--background);
             line-height: 1.6;
         }
-
 
         a {
             color: inherit;
             text-decoration: none;
         }
 
+        img {
+            max-width: 100%;
+            display: block;
+        }
 
         .container {
             width: min(100% - 40px, var(--max-width));
             margin: 0 auto;
         }
-
 
         /* =========================
            NAVIGATION
@@ -95,45 +74,35 @@
             position: sticky;
             top: 0;
             z-index: 1000;
-
             background: rgba(255, 255, 255, 0.94);
             backdrop-filter: blur(10px);
-
             border-bottom: 1px solid var(--border);
         }
 
-
         .navbar-inner {
             min-height: 68px;
-
             display: flex;
             align-items: center;
             justify-content: space-between;
         }
 
-
         .brand {
             display: flex;
             align-items: center;
             gap: 12px;
-
             font-weight: 600;
         }
-
 
         .brand img {
             width: 42px;
             height: 42px;
-
             border-radius: 50%;
             object-fit: cover;
         }
 
-
         .brand-name {
             font-size: 16px;
         }
-
 
         .nav-links {
             display: flex;
@@ -141,24 +110,19 @@
             gap: 28px;
         }
 
-
         .nav-links a {
             color: #555;
             font-size: 14px;
-
             transition: color 0.2s ease;
         }
-
 
         .nav-links a:hover {
             color: var(--text);
         }
 
-
         .linkedin-link {
             font-size: 21px !important;
         }
-
 
         /* =========================
            HERO
@@ -168,151 +132,110 @@
             padding: 110px 0 120px;
         }
 
-
         .hero-content {
             max-width: 900px;
         }
-
 
         .hero-eyebrow {
             display: inline-flex;
             align-items: center;
             gap: 8px;
-
             margin-bottom: 22px;
             padding: 7px 13px;
-
             background: var(--accent-light);
             color: var(--accent);
-
             border-radius: 20px;
-
             font-size: 13px;
             font-weight: 600;
+            letter-spacing: 0.02em;
         }
-
 
         .hero h1 {
             margin: 0 0 25px;
-
             font-size: clamp(46px, 7vw, 78px);
             line-height: 1.02;
-
             letter-spacing: -0.045em;
             font-weight: 700;
         }
 
-
         .hero-title {
             font-size: clamp(22px, 3vw, 30px);
             line-height: 1.3;
-
             font-weight: 500;
-
             color: #444;
-
             max-width: 850px;
-
             margin-bottom: 28px;
         }
 
-
         .hero-description {
             max-width: 760px;
-
             font-size: 18px;
-
             color: var(--text-secondary);
-
             margin: 0;
         }
-
 
         .hero-actions {
             display: flex;
             gap: 14px;
-
             margin-top: 35px;
-
             flex-wrap: wrap;
         }
-
 
         .button {
             display: inline-flex;
             align-items: center;
             justify-content: center;
             gap: 9px;
-
             padding: 12px 20px;
-
             border-radius: 7px;
-
             font-size: 14px;
             font-weight: 600;
-
             transition: all 0.2s ease;
         }
-
 
         .button-primary {
             color: white;
             background: var(--surface-dark);
         }
 
-
         .button-primary:hover {
             transform: translateY(-1px);
             opacity: 0.9;
         }
 
-
         .button-secondary {
             border: 1px solid var(--border);
-
             color: var(--text);
             background: white;
         }
-
 
         .button-secondary:hover {
             background: var(--surface);
         }
 
-
         /* =========================
-           SECTIONS
+           SECTION
         ========================= */
 
         section {
             padding: 100px 0;
         }
 
-
         .section-label {
             color: var(--accent);
-
             text-transform: uppercase;
-
             letter-spacing: 0.12em;
-
             font-size: 12px;
             font-weight: 700;
-
             margin-bottom: 12px;
         }
 
-
         .section-title {
             margin: 0 0 45px;
-
             font-size: clamp(32px, 5vw, 46px);
-
             line-height: 1.1;
-
             letter-spacing: -0.035em;
         }
-
 
         /* =========================
            ABOUT
@@ -322,39 +245,28 @@
             background: var(--surface);
         }
 
-
         .about-grid {
             display: grid;
-
             grid-template-columns: 0.8fr 1.2fr;
-
             gap: 80px;
-
             align-items: start;
         }
 
-
         .about-intro {
             font-size: 22px;
-
             line-height: 1.45;
-
             font-weight: 500;
         }
 
-
         .about-text {
             color: var(--text-secondary);
-
             font-size: 17px;
         }
-
 
         .about-text p {
             margin-top: 0;
             margin-bottom: 22px;
         }
-
 
         /* =========================
            EXPERTISE
@@ -362,154 +274,99 @@
 
         .expertise-grid {
             display: grid;
-
             grid-template-columns: repeat(4, 1fr);
-
             gap: 1px;
-
             background: var(--border);
-
             border: 1px solid var(--border);
         }
 
-
         .expertise-card {
             background: white;
-
             padding: 32px 26px;
-
             min-height: 180px;
         }
 
-
         .expertise-icon {
             font-size: 22px;
-
             color: var(--accent);
-
             margin-bottom: 25px;
         }
 
-
         .expertise-card h3 {
             margin: 0 0 10px;
-
             font-size: 18px;
         }
 
-
         .expertise-card p {
             margin: 0;
-
             color: var(--text-secondary);
-
             font-size: 14px;
         }
 
-
         /* =========================
-           CURRENT EXPERIENCE
+           EXPERIENCE
         ========================= */
 
         .experience {
             background: var(--surface);
         }
 
-
-        .experience-intro {
-            max-width: 760px;
-
-            color: var(--text-secondary);
-
-            font-size: 17px;
-
-            margin-bottom: 50px;
-        }
-
-
         .experience-grid {
             display: grid;
-
             grid-template-columns: repeat(2, 1fr);
-
             gap: 25px;
         }
 
-
         .experience-card {
             background: white;
-
             border: 1px solid var(--border);
-
             border-radius: 10px;
-
-            padding: 35px;
-
-            transition:
-                transform 0.2s ease,
-                box-shadow 0.2s ease;
+            overflow: hidden;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
-
 
         .experience-card:hover {
             transform: translateY(-3px);
-
-            box-shadow:
-                0 12px 35px rgba(0, 0, 0, 0.07);
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.07);
         }
 
-
-        .experience-icon {
-            width: 46px;
-            height: 46px;
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            margin-bottom: 25px;
-
-            border-radius: 8px;
-
-            background: var(--accent-light);
-
-            color: var(--accent);
-
-            font-size: 19px;
+        .experience-image {
+            height: 220px;
+            overflow: hidden;
+            background: #eee;
         }
 
+        .experience-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
 
-        .experience-card h3 {
-            margin: 0 0 15px;
+        .experience-body {
+            padding: 30px;
+        }
 
-            font-size: 22px;
-
+        .experience-body h3 {
+            margin: 0 0 12px;
+            font-size: 21px;
             line-height: 1.3;
         }
 
-
-        .experience-card > p {
+        .experience-body > p {
             color: var(--text-secondary);
-
-            margin-bottom: 25px;
+            margin-bottom: 22px;
         }
 
-
-        .experience-card ul {
+        .experience-body ul {
             padding-left: 20px;
-
             margin: 0;
-
             color: #555;
-
             font-size: 14px;
         }
 
-
-        .experience-card li {
-            margin-bottom: 10px;
+        .experience-body li {
+            margin-bottom: 8px;
         }
-
 
         /* =========================
            HOW I WORK
@@ -519,70 +376,85 @@
             background: white;
         }
 
-
-        .how-intro {
-            max-width: 760px;
-
+        .flow-intro {
+            max-width: 720px;
             color: var(--text-secondary);
-
-            font-size: 18px;
-
-            margin-bottom: 45px;
+            font-size: 17px;
+            margin-bottom: 55px;
         }
 
-
-        .automation-card {
+        .workflow {
             display: grid;
-
-            grid-template-columns: auto 1fr;
-
-            gap: 25px;
-
-            padding: 40px;
-
-            background: var(--surface-dark);
-
-            color: white;
-
-            border-radius: 10px;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 0;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
         }
 
-
-        .automation-icon {
-            width: 54px;
-            height: 54px;
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            border-radius: 10px;
-
-            background: #242424;
-
-            color: #9db7ff;
-
-            font-size: 22px;
+        .workflow-step {
+            position: relative;
+            padding: 32px 20px;
+            min-height: 190px;
+            border-right: 1px solid var(--border);
         }
 
-
-        .automation-card h3 {
-            margin: 0 0 12px;
-
-            font-size: 25px;
+        .workflow-step:last-child {
+            border-right: none;
         }
 
+        .workflow-number {
+            font-size: 12px;
+            color: var(--accent);
+            font-weight: 700;
+            margin-bottom: 22px;
+        }
 
-        .automation-card p {
+        .workflow-step h3 {
+            margin: 0 0 10px;
+            font-size: 17px;
+        }
+
+        .workflow-step p {
             margin: 0;
-
-            max-width: 750px;
-
-            color: #bdbdbd;
-
-            font-size: 16px;
+            color: var(--text-secondary);
+            font-size: 13px;
+            line-height: 1.5;
         }
 
+        .workflow-ai {
+            background: var(--surface-dark);
+            color: white;
+        }
+
+        .workflow-ai .workflow-number {
+            color: #9db7ff;
+        }
+
+        .workflow-ai p {
+            color: #bdbdbd;
+        }
+
+        .ai-note {
+            display: flex;
+            gap: 18px;
+            align-items: flex-start;
+            margin-top: 40px;
+            padding: 25px;
+            background: var(--surface);
+            border-left: 3px solid var(--accent);
+        }
+
+        .ai-note-icon {
+            color: var(--accent);
+            font-size: 20px;
+            padding-top: 2px;
+        }
+
+        .ai-note p {
+            margin: 0;
+            color: #555;
+            font-size: 15px;
+        }
 
         /* =========================
            CONTACT
@@ -590,68 +462,46 @@
 
         .contact {
             background: var(--surface-dark);
-
             color: white;
-
             text-align: center;
         }
-
 
         .contact .section-label {
             color: #9db7ff;
         }
 
-
         .contact h2 {
             margin-bottom: 20px;
         }
 
-
         .contact-text {
             max-width: 620px;
-
             margin: 0 auto 35px;
-
             color: #aaa;
-
             font-size: 17px;
         }
 
-
         .contact-links {
             display: flex;
-
             justify-content: center;
-
             gap: 18px;
-
             flex-wrap: wrap;
         }
 
-
         .contact-link {
             display: inline-flex;
-
             align-items: center;
-
             gap: 10px;
-
             padding: 12px 18px;
-
             border: 1px solid #333;
-
             border-radius: 7px;
-
             color: white;
-
             transition: background 0.2s ease;
         }
-
 
         .contact-link:hover {
             background: #222;
         }
-
 
         /* =========================
            FOOTER
@@ -659,18 +509,12 @@
 
         footer {
             padding: 25px 0;
-
             background: var(--surface-dark);
-
             color: #666;
-
             border-top: 1px solid #222;
-
             text-align: center;
-
             font-size: 12px;
         }
-
 
         /* =========================
            RESPONSIVE
@@ -680,22 +524,29 @@
 
             .about-grid {
                 grid-template-columns: 1fr;
-
                 gap: 35px;
             }
-
 
             .expertise-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
 
-
-            .experience-grid {
-                grid-template-columns: 1fr;
+            .workflow {
+                grid-template-columns: repeat(2, 1fr);
             }
 
-        }
+            .workflow-step {
+                border-bottom: 1px solid var(--border);
+            }
 
+            .workflow-step:nth-child(2n) {
+                border-right: none;
+            }
+
+            .workflow-step:last-child {
+                grid-column: span 2;
+            }
+        }
 
         @media (max-width: 700px) {
 
@@ -703,67 +554,68 @@
                 width: min(100% - 28px, var(--max-width));
             }
 
-
             .navbar-inner {
                 min-height: 60px;
             }
-
 
             .brand-name {
                 display: none;
             }
 
-
             .nav-links {
                 gap: 15px;
             }
-
 
             .nav-links a {
                 font-size: 12px;
             }
 
-
             .hero {
                 padding: 75px 0 85px;
             }
-
 
             section {
                 padding: 75px 0;
             }
 
-
             .hero-title {
                 font-size: 21px;
             }
-
 
             .hero-description {
                 font-size: 16px;
             }
 
-
-            .expertise-grid {
+            .expertise-grid,
+            .experience-grid {
                 grid-template-columns: 1fr;
             }
 
-
-            .automation-card {
+            .workflow {
                 grid-template-columns: 1fr;
-
-                padding: 30px;
             }
 
+            .workflow-step {
+                border-right: none !important;
+                border-bottom: 1px solid var(--border);
+                min-height: auto;
+            }
+
+            .workflow-step:last-child {
+                grid-column: auto;
+                border-bottom: none;
+            }
+
+            .experience-image {
+                height: 190px;
+            }
         }
 
     </style>
-
 </head>
 
 
 <body>
-
 
     <!-- =========================
          NAVIGATION
@@ -775,8 +627,7 @@
 
             <a href="#top" class="brand">
 
-                <img
-                    src="images/ivanpico_rounded.png"
+                <img src="images/ivanpico_rounded.png"
                     alt="Ivan Picó">
 
                 <span class="brand-name">
@@ -808,8 +659,7 @@
                     Contact
                 </a>
 
-                <a
-                    href="https://www.linkedin.com/in/ivanpico"
+                <a href="https://www.linkedin.com/in/ivanpico"
                     target="_blank"
                     rel="noopener noreferrer"
                     class="linkedin-link"
@@ -839,13 +689,9 @@
 
                 <div class="hero-content">
 
-
                     <div class="hero-eyebrow">
-
                         <i class="fas fa-project-diagram"></i>
-
                         Technical Project Manager
-
                     </div>
 
 
@@ -855,11 +701,9 @@
 
 
                     <div class="hero-title">
-
                         Leveraging AI-driven automation to streamline
                         PM tasks, increase productivity, and design
                         AI-powered workflows.
-
                     </div>
 
 
@@ -874,20 +718,17 @@
 
                     <div class="hero-actions">
 
-
-                        <a
-                            href="#experience"
+                        <a href="#experience"
                             class="button button-primary">
 
-                            Current experience
+                            Explore my experience
 
                             <i class="fas fa-arrow-down"></i>
 
                         </a>
 
 
-                        <a
-                            href="https://www.linkedin.com/in/ivanpico"
+                        <a href="https://www.linkedin.com/in/ivanpico"
                             target="_blank"
                             rel="noopener noreferrer"
                             class="button button-secondary">
@@ -897,7 +738,6 @@
                             LinkedIn
 
                         </a>
-
 
                     </div>
 
@@ -916,7 +756,6 @@
 
             <div class="container">
 
-
                 <div class="section-label">
                     About
                 </div>
@@ -924,21 +763,17 @@
 
                 <div class="about-grid">
 
-
                     <div>
 
                         <h2 class="section-title">
-
                             Project Management
                             with a technical mindset.
-
                         </h2>
 
                     </div>
 
 
                     <div class="about-text">
-
 
                         <p>
                             Technical Project Manager leveraging
@@ -947,7 +782,6 @@
                             AI-powered workflows.
                         </p>
 
-
                         <p>
                             I actively explore and apply AI to automate
                             repetitive management activities, improve
@@ -955,14 +789,12 @@
                             more efficient.
                         </p>
 
-
                         <p>
                             I manage project planning, delivery, risks
                             and dependencies while coordinating business
                             and technical teams throughout the project
                             lifecycle.
                         </p>
-
 
                     </div>
 
@@ -981,11 +813,9 @@
 
             <div class="container">
 
-
                 <div class="section-label">
                     Expertise
                 </div>
-
 
                 <h2 class="section-title">
                     What I focus on
@@ -1035,16 +865,16 @@
                     <article class="expertise-card">
 
                         <div class="expertise-icon">
-                            <i class="fas fa-sitemap"></i>
+                            <i class="fas fa-tasks"></i>
                         </div>
 
                         <h3>
-                            Technical Governance
+                            Agile Delivery
                         </h3>
 
                         <p>
-                            Following dependencies, responsibilities,
-                            risks, incidents and project evolution.
+                            Product vision, roadmap, prioritisation,
+                            backlog management and iterative delivery.
                         </p>
 
                     </article>
@@ -1077,154 +907,145 @@
 
 
         <!-- =========================
-             CURRENT EXPERIENCE
+             EXPERIENCE
         ========================= -->
 
         <section id="experience" class="experience">
 
             <div class="container">
 
-
                 <div class="section-label">
                     Experience
                 </div>
 
-
                 <h2 class="section-title">
-                    Technical Project Management
+                    Selected experience
                 </h2>
-
-
-                <p class="experience-intro">
-
-                    Managing complex digital initiatives by connecting
-                    business objectives, technical teams and delivery
-                    throughout the project lifecycle.
-
-                </p>
 
 
                 <div class="experience-grid">
 
 
-                    <!-- PROJECT PLANNING -->
+                    <!-- Cybersecurity -->
 
                     <article class="experience-card">
 
+                        <div class="experience-image">
 
-                        <div class="experience-icon">
-
-                            <i class="fas fa-calendar-check"></i>
+                            <img src="images/ciberseguridad.jpg"
+                                alt="Cybersecurity in Banking Mobile Application">
 
                         </div>
 
 
-                        <h3>
-                            Project Planning & Delivery
-                        </h3>
+                        <div class="experience-body">
 
+                            <h3>
+                                Cybersecurity in Banking
+                                Mobile Application
+                            </h3>
 
-                        <p>
+                            <p>
+                                Implementation of security solutions
+                                for a banking mobile application.
+                            </p>
 
-                            Coordinating project planning and delivery
-                            across multiple teams, adapting plans as
-                            technical dependencies and project
-                            constraints evolve.
+                            <ul>
 
-                        </p>
+                                <li>
+                                    Analyze vulnerabilities and threats.
+                                </li>
 
+                                <li>
+                                    Develop solutions to mitigate
+                                    vulnerabilities.
+                                </li>
 
-                        <ul>
+                                <li>
+                                    Work with other teams to implement
+                                    security measures.
+                                </li>
 
-                            <li>
-                                Coordinate delivery planning and
-                                project milestones.
-                            </li>
+                                <li>
+                                    Perform penetration testing and
+                                    security assessments.
+                                </li>
 
-                            <li>
-                                Track committed dates and delivery
-                                dependencies.
-                            </li>
+                                <li>
+                                    Provide training on security to
+                                    employees and customers.
+                                </li>
 
-                            <li>
-                                Identify gaps, risks and impacts on
-                                project timelines.
-                            </li>
+                            </ul>
 
-                            <li>
-                                Re-plan delivery when dependencies or
-                                technical constraints change.
-                            </li>
-
-                            <li>
-                                Maintain visibility of project
-                                progress and pending actions.
-                            </li>
-
-                        </ul>
+                        </div>
 
                     </article>
 
 
-                    <!-- TECHNICAL COORDINATION -->
+                    <!-- Agile / Product Owner -->
 
                     <article class="experience-card">
 
+                        <div class="experience-image">
 
-                        <div class="experience-icon">
-
-                            <i class="fas fa-network-wired"></i>
+                            <img src="images/it.jpg"
+                                alt="Agile Project Management">
 
                         </div>
 
 
-                        <h3>
-                            Technical Coordination & Governance
-                        </h3>
+                        <div class="experience-body">
 
+                            <h3>
+                                Agile Project Management
+                            </h3>
 
-                        <p>
-
-                            Acting as a connection point between
-                            business, UX, architecture, development,
-                            vendors and service teams.
-
-                        </p>
-
-
-                        <ul>
-
-                            <li>
-                                Coordinate business and technical
+                            <p>
+                                Product Owner responsibilities focused
+                                on project development, product direction
+                                and collaboration between teams and
                                 stakeholders.
-                            </li>
+                            </p>
 
-                            <li>
-                                Manage cross-team technical and
-                                functional dependencies.
-                            </li>
+                            <ul>
 
-                            <li>
-                                Follow technical gaps, risks and
-                                responsibilities.
-                            </li>
+                                <li>
+                                    Define the product vision and roadmap.
+                                </li>
 
-                            <li>
-                                Coordinate incident resolution and
-                                project evolution.
-                            </li>
+                                <li>
+                                    Prioritize product features and
+                                    backlog items.
+                                </li>
 
-                            <li>
-                                Prepare technical handover and
-                                transition to service.
-                            </li>
+                                <li>
+                                    Act as a liaison between the
+                                    development team and stakeholders.
+                                </li>
 
-                            <li>
-                                Support technical governance and
-                                project follow-up.
-                            </li>
+                                <li>
+                                    Ensure the product meets the needs
+                                    of users and stakeholders.
+                                </li>
 
-                        </ul>
+                                <li>
+                                    Conduct market research and user
+                                    feedback sessions.
+                                </li>
+
+                                <li>
+                                    Collaborate with UX/UI designers.
+                                </li>
+
+                                <li>
+                                    Oversee the product lifecycle from
+                                    conception to launch.
+                                </li>
+
+                            </ul>
+
+                        </div>
 
                     </article>
 
@@ -1244,60 +1065,191 @@
 
             <div class="container">
 
-
                 <div class="section-label">
                     How I Work
                 </div>
 
-
                 <h2 class="section-title">
-                    Automate & Improve
+                    From complexity to delivery.
                 </h2>
 
 
-                <p class="how-intro">
+                <p class="flow-intro">
 
-                    I actively explore where AI can make Project
-                    Management more efficient, particularly in
-                    repetitive activities that consume time without
-                    necessarily adding proportional value.
+                    I combine project management, technical
+                    understanding and AI-assisted workflows to keep
+                    projects structured, aligned and moving forward.
 
                 </p>
 
 
-                <div class="automation-card">
+                <div class="workflow">
 
 
-                    <div class="automation-icon">
+                    <!-- 01 -->
 
-                        <i class="fas fa-robot"></i>
+                    <div class="workflow-step">
 
-                    </div>
-
-
-                    <div>
+                        <div class="workflow-number">
+                            01
+                        </div>
 
                         <h3>
-                            AI-driven workflows
+                            Understand
                         </h3>
 
-
                         <p>
-
-                            I use AI to explore and design workflows
-                            that can automate repetitive management
-                            activities, accelerate information
-                            processing, improve documentation and
-                            support more efficient project execution.
-
-                            The objective is not to replace project
-                            management, but to reduce operational
-                            overhead and create more time for
-                            coordination, decisions and delivery.
-
+                            Understand objectives, requirements,
+                            constraints and the context around
+                            the project.
                         </p>
 
                     </div>
+
+
+                    <!-- 02 -->
+
+                    <div class="workflow-step">
+
+                        <div class="workflow-number">
+                            02
+                        </div>
+
+                        <h3>
+                            Align
+                        </h3>
+
+                        <p>
+                            Align business, technical teams and
+                            stakeholders around objectives and
+                            expectations.
+                        </p>
+
+                    </div>
+
+
+                    <!-- 03 -->
+
+                    <div class="workflow-step">
+
+                        <div class="workflow-number">
+                            03
+                        </div>
+
+                        <h3>
+                            Define
+                        </h3>
+
+                        <p>
+                            Define scope, priorities, requirements,
+                            responsibilities and the path forward.
+                        </p>
+
+                    </div>
+
+
+                    <!-- 04 -->
+
+                    <div class="workflow-step">
+
+                        <div class="workflow-number">
+                            04
+                        </div>
+
+                        <h3>
+                            Plan
+                        </h3>
+
+                        <p>
+                            Establish milestones, dependencies,
+                            risks and delivery plans.
+                        </p>
+
+                    </div>
+
+
+                    <!-- 05 -->
+
+                    <div class="workflow-step">
+
+                        <div class="workflow-number">
+                            05
+                        </div>
+
+                        <h3>
+                            Coordinate
+                        </h3>
+
+                        <p>
+                            Keep teams connected, follow progress,
+                            resolve dependencies and facilitate
+                            decisions.
+                        </p>
+
+                    </div>
+
+
+                    <!-- 06 -->
+
+                    <div class="workflow-step">
+
+                        <div class="workflow-number">
+                            06
+                        </div>
+
+                        <h3>
+                            Deliver
+                        </h3>
+
+                        <p>
+                            Drive execution towards tangible
+                            outcomes while maintaining visibility
+                            over progress and risks.
+                        </p>
+
+                    </div>
+
+
+                    <!-- 07 -->
+
+                    <div class="workflow-step workflow-ai">
+
+                        <div class="workflow-number">
+                            AI
+                        </div>
+
+                        <h3>
+                            Automate & Improve
+                        </h3>
+
+                        <p>
+                            Identify repetitive PM activities and
+                            use AI-driven workflows to automate,
+                            accelerate and continuously improve
+                            the way work is done.
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+
+                <div class="ai-note">
+
+                    <div class="ai-note-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+
+                    <p>
+
+                        <strong>AI is part of the workflow.</strong>
+                        I actively explore where AI can reduce
+                        repetitive management work, improve
+                        information processing and create more
+                        efficient ways of working.
+
+                    </p>
 
                 </div>
 
@@ -1314,7 +1266,6 @@
 
             <div class="container">
 
-
                 <div class="section-label">
                     Contact
                 </div>
@@ -1327,17 +1278,15 @@
 
                 <p class="contact-text">
 
-                    Interested in Project Management,
-                    technology or AI-driven workflows?
+                    Interested in project management, technology,
+                    AI-driven workflows or simply exchanging ideas?
 
                 </p>
 
 
                 <div class="contact-links">
 
-
-                    <a
-                        href="https://www.linkedin.com/in/ivanpico"
+                    <a href="https://www.linkedin.com/in/ivanpico"
                         target="_blank"
                         rel="noopener noreferrer"
                         class="contact-link">
@@ -1349,8 +1298,7 @@
                     </a>
 
 
-                    <a
-                        href="mailto:ivan.pico.martin@gmail.com"
+                    <a href="mailto:ivan.pico.martin@gmail.com"
                         class="contact-link">
 
                         <i class="fas fa-envelope"></i>
@@ -1358,7 +1306,6 @@
                         Email
 
                     </a>
-
 
                 </div>
 
