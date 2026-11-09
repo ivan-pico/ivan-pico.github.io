@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="En Moments Viajes diseñamos viajes a medida para que tú solo tengas que disfrutar.">
+  <title>Moments Viajes | Viajes a medida, momentos únicos</title>
+
+  <!-- Tipografías gratuitas: Cormorant Garamond y Manrope (Google Fonts) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --cream: #F5F0E7;
+      --paper: #FBF9F4;
+      --olive: #303B30;
+      --olive-light: #68715D;
+      --terracotta: #A65338;
+      --sand: #D8C7AD;
+      --ink: #282923;
+      --muted: #716F66;
+      --line: rgba(48, 59, 48, .17);
+      --serif: "Cormorant Garamond", Georgia, serif;
+      --sans: "Manrope", Arial, sans-serif;
+      --container: 1180px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: var(--sans);
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; text-decoration: none; }
+    button { font: inherit; }
+    .container { width: min(var(--container), calc(100% - 64px)); margin: 0 auto; }
+
+    .topbar {
+      position: relative;
+      z-index: 5;
+      background: rgba(251,249,244,.96);
+      border-bottom: 1px solid rgba(48,59,48,.08);
+    }
+    .nav {
+      min-height: 88px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 28px;
+    }
+    .logo-placeholder {
+      width: 190px;
+      height: 52px;
+      flex: 0 0 190px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px dashed rgba(48,59,48,.3);
+      color: #8b897f;
+      font-size: 10px;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+    .nav-links { display: flex; align-items: center; gap: 34px; }
+    .nav-links a {
+      font-size: 12px;
+      font-weight: 600;
+      color: #4c4d44;
+      transition: color .2s ease;
+    }
+    .nav-links a:hover { color: var(--terracotta); }
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      min-height: 48px;
+      padding: 0 23px;
+      border: 1px solid transparent;
+      background: var(--olive);
+      color: white;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .02em;
+      transition: transform .2s ease, background .2s ease;
+      cursor: pointer;
+    }
+    .button:hover { background: #202a21; transform: translateY(-2px); }
+    .button-light {
+      color: var(--olive);
+      background: var(--paper);
+      border-color: rgba(48,59,48,.2);
+    }
+    .button-light:hover { color: white; background: var(--olive); }
+    .instagram-header { width: 42px; height: 42px; display: grid; place-items: center; color: var(--olive); border: 1px solid var(--line); border-radius: 50%; transition: color .2s ease, background .2s ease; }
+    .instagram-header:hover { color: white; background: var(--olive); }
+    .instagram-header svg { width: 19px; height: 19px; }
+    .menu-toggle { display: none; border: 0; background: transparent; color: var(--olive); font-size: 25px; }
+
+    .hero {
+      min-height: 650px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      background:
+        linear-gradient(90deg, rgba(28,34,27,.72) 0%, rgba(28,34,27,.45) 43%, rgba(28,34,27,.05) 100%),
+        url("https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=2200&q=88") center 48% / cover no-repeat;
+    }
+    .hero-content { position: relative; z-index: 1; padding: 90px 0 110px; color: white; max-width: 680px; }
+    .eyebrow {
+      margin: 0 0 20px;
+      color: var(--sand);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: .23em;
+      text-transform: uppercase;
+    }
+    h1, h2, h3, p { margin-top: 0; }
+    h1 {
+      max-width: 660px;
+      margin-bottom: 22px;
+      font-family: var(--serif);
+      font-size: clamp(54px, 6.3vw, 84px);
+      font-weight: 500;
+      line-height: .91;
+      letter-spacing: -.035em;
+    }
+    .hero-copy { max-width: 470px; margin-bottom: 30px; color: rgba(255,255,255,.9); font-size: 14px; line-height: 1.9; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+    .hero .button { background: var(--cream); color: var(--olive); }
+    .hero .button:hover { background: white; }
+    .hero .button-outline { background: transparent; color: white; border-color: rgba(255,255,255,.7); }
+    .hero .button-outline:hover { background: white; color: var(--olive); }
+
+    .benefits {
+      position: relative;
+      z-index: 2;
+      margin-top: -1px;
+      background: var(--cream);
+      border-bottom: 1px solid var(--line);
+    }
+    .benefit-grid { display: grid; grid-template-columns: repeat(3, 1fr); padding: 29px 0; }
+    .benefit {
+      display: flex;
+      align-items: center;
+      gap: 17px;
+      padding: 4px 30px;
+      border-right: 1px solid var(--line);
+    }
+    .benefit:first-child { padding-left: 0; }
+    .benefit:last-child { border: 0; padding-right: 0; }
+    .benefit-icon {
+      width: 40px; height: 40px; flex: 0 0 40px;
+      display: grid; place-items: center;
+      border: 1px solid var(--olive-light);
+      border-radius: 50%;
+      color: var(--olive);
+      font-family: var(--serif);
+      font-size: 22px;
+    }
+    .benefit strong { display: block; margin-bottom: 4px; font-family: var(--serif); font-size: 19px; font-weight: 600; }
+    .benefit span { display: block; color: var(--muted); font-size: 10px; line-height: 1.6; }
+
+    section { padding: 100px 0; }
+    .section-heading { max-width: 650px; margin-bottom: 42px; }
+    .section-heading .eyebrow { color: var(--terracotta); margin-bottom: 13px; }
+    h2 { margin-bottom: 13px; font-family: var(--serif); font-size: clamp(39px, 4.5vw, 57px); font-weight: 500; line-height: .98; letter-spacing: -.025em; }
+    .section-intro { max-width: 520px; color: var(--muted); font-size: 13px; line-height: 1.9; }
+
+    .experiences { background: var(--paper); }
+    .experience-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .experience-card { position: relative; min-height: 390px; overflow: hidden; background: #ddd; }
+    .experience-card img { width: 100%; height: 390px; display: block; object-fit: cover; transition: transform .7s ease; }
+    .experience-card:hover img { transform: scale(1.04); }
+    .experience-card::after { content: ""; position: absolute; inset: 35% 0 0; background: linear-gradient(transparent, rgba(20,24,19,.72)); }
+    .experience-text { position: absolute; z-index: 1; left: 25px; right: 25px; bottom: 25px; color: white; }
+    .experience-text small { color: #e9d7bd; font-size: 9px; letter-spacing: .17em; text-transform: uppercase; }
+    .experience-text h3 { margin: 8px 0 5px; font-family: var(--serif); font-size: 31px; font-weight: 500; }
+    .experience-text p { margin: 0; color: rgba(255,255,255,.85); font-size: 11px; }
+
+    .about { background: var(--cream); }
+    .about-grid { display: grid; grid-template-columns: 1.05fr .95fr; align-items: center; gap: 75px; }
+    .about-image { min-height: 520px; background: url("https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?auto=format&fit=crop&w=1200&q=85") center / cover no-repeat; }
+    .about-copy { padding: 25px 0; }
+    .about-copy .eyebrow { color: var(--terracotta); }
+    .about-copy p { color: var(--muted); font-size: 13px; line-height: 2; }
+    .text-link { display: inline-flex; align-items: center; gap: 13px; margin-top: 12px; color: var(--olive); font-size: 11px; font-weight: 700; border-bottom: 1px solid var(--olive); padding-bottom: 7px; }
+
+    .process { background: var(--olive); color: var(--paper); }
+    .process .eyebrow { color: #d5b996; }
+    .process .section-intro { color: rgba(251,249,244,.68); }
+    .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 35px; margin-top: 55px; }
+    .step { padding-top: 22px; border-top: 1px solid rgba(245,240,231,.28); }
+    .step-number { color: #c5a47f; font-family: var(--serif); font-size: 27px; }
+    .step h3 { margin: 13px 0 9px; font-family: var(--serif); font-size: 27px; font-weight: 500; }
+    .step p { max-width: 300px; margin: 0; color: rgba(251,249,244,.7); font-size: 11px; line-height: 1.9; }
+
+    .closing {
+      padding: 95px 0;
+      text-align: center;
+      background:
+        linear-gradient(rgba(33,39,30,.58), rgba(33,39,30,.58)),
+        url("https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=2000&q=85") center 54% / cover no-repeat;
+      color: white;
+    }
+    .closing .eyebrow { color: #e0c6a5; }
+    .closing h2 { max-width: 720px; margin: 0 auto 18px; }
+    .closing p { max-width: 510px; margin: 0 auto 28px; color: rgba(255,255,255,.85); font-size: 12px; line-height: 1.8; }
+    .closing .button { background: var(--cream); color: var(--olive); }
+    .closing .button-outline { background: transparent; color: white; border-color: rgba(255,255,255,.75); }
+    .closing .button-outline:hover { background: white; color: var(--olive); }
+    .contact-options { display: flex; justify-content: center; flex-wrap: wrap; gap: 12px; }
+
+    footer { padding: 38px 0; background: #252e25; color: rgba(251,249,244,.72); }
+    .footer-inner { display: flex; justify-content: space-between; align-items: center; gap: 25px; }
+    .footer-brand { color: var(--cream); font-family: var(--serif); font-size: 23px; letter-spacing: .13em; }
+    .footer-brand small { display: block; margin-top: 2px; font-family: var(--sans); font-size: 8px; letter-spacing: .25em; text-align: center; }
+    footer p, .footer-contact { margin: 0; font-size: 10px; }
+    .footer-contact { display: flex; flex-direction: column; align-items: flex-end; gap: 8px; }
+    .footer-contact a { color: rgba(251,249,244,.78); }
+    .footer-contact a:hover { color: white; }
+
+    @media (max-width: 850px) {
+      .container { width: min(100% - 40px, var(--container)); }
+      .nav { min-height: 76px; }
+      .nav-links {
+        display: none;
+        position: absolute; top: 76px; left: 0; right: 0;
+        padding: 24px 25px; background: var(--paper);
+        flex-direction: column; align-items: flex-start; gap: 20px;
+        border-bottom: 1px solid var(--line);
+      }
+      .nav-links.open { display: flex; }
+      .menu-toggle { display: block; }
+      .hero { min-height: 610px; background-position: 58% center; }
+      .hero-content { padding: 80px 0; }
+      .benefit-grid { grid-template-columns: 1fr; padding: 15px 0; }
+      .benefit, .benefit:first-child, .benefit:last-child { padding: 15px 0; border-right: 0; border-bottom: 1px solid var(--line); }
+      .benefit:last-child { border-bottom: 0; }
+      section { padding: 75px 0; }
+      .experience-grid { grid-template-columns: 1fr 1fr; }
+      .experience-card, .experience-card img { min-height: 330px; height: 330px; }
+      .about-grid { grid-template-columns: 1fr; gap: 35px; }
+      .about-image { min-height: 390px; }
+      .steps { gap: 20px; }
+    }
+    @media (max-width: 560px) {
+      .container { width: calc(100% - 36px); }
+      .logo-placeholder { width: 155px; flex-basis: 155px; height: 45px; font-size: 8px; }
+      .hero { min-height: 630px; background-position: 60% center; }
+      .hero-content { padding: 70px 0; }
+      h1 { font-size: 57px; }
+      .hero-copy { max-width: 340px; font-size: 12px; }
+      .hero-actions { align-items: stretch; flex-direction: column; max-width: 260px; }
+      .experience-grid { grid-template-columns: 1fr; }
+      .experience-card, .experience-card img { height: 360px; min-height: 360px; }
+      .steps { grid-template-columns: 1fr; gap: 28px; }
+      .about-image { min-height: 330px; }
+      .footer-inner { align-items: flex-start; flex-direction: column; }
+      .footer-contact { align-items: flex-start; }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="container nav">
+      <!-- ESPACIO RESERVADO PARA EL LOGO DE MOMENTS 
+      <a class="logo-placeholder" href="#inicio" aria-label="Moments Viajes"></a>-->
+
+      <nav class="nav-links" id="mainNav" aria-label="Navegación principal">
+        <a href="#inicio">Inicio</a>
+        <a href="#experiencias">Experiencias</a>
+        <a href="#como-funciona">Cómo funciona</a>
+        <a href="#nosotros">Sobre Moments</a>
+      </nav>
+
+      <a class="instagram-header" href="https://www.instagram.com/momentsviajes/" target="_blank" rel="noopener noreferrer" aria-label="Visita Moments Viajes en Instagram" title="Instagram de Moments Viajes">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="17.6" cy="6.6" r="1.1" fill="currentColor"/></svg>
+      </a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="container">
+        <div class="hero-content">
+          <p class="eyebrow">Viajes a medida · Momentos extraordinarios</p>
+          <h1>Experiencias extraordinarias, creadas para ti.</h1>
+          <p class="hero-copy">
+            Diseñamos viajes únicos que combinan autenticidad, confort y atención al detalle,
+            para que tú solo tengas que disfrutar. De la planificación nos encargamos nosotros.
+          </p>
+          <div class="hero-actions">
+            <a class="button" href="mailto:hola@momentsviajes.com?subject=Quiero%20planificar%20un%20viaje">Cuéntanos tu próximo viaje <span>→</span></a>
+            <a class="button button-outline" href="#como-funciona">Descubre cómo funciona</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="benefits">
+      <div class="container benefit-grid">
+        <div class="benefit">
+          <div class="benefit-icon">✧</div>
+          <div><strong>Viajes personalizados</strong><span>Diseñados según tus gustos, ritmo y forma de viajar.</span></div>
+        </div>
+        <div class="benefit">
+          <div class="benefit-icon">⌂</div>
+          <div><strong>Gestión integral</strong><span>Nos ocupamos de cada detalle, de principio a fin.</span></div>
+        </div>
+        <div class="benefit">
+          <div class="benefit-icon">◇</div>
+          <div><strong>Experiencias especiales</strong><span>Lugares y momentos que recordarás siempre.</span></div>
+        </div>
+      </div>
+    </div>
+
+    <section class="experiences" id="experiencias">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Inspiración para tu próximo viaje</p>
+          <h2>El mundo está lleno de momentos por descubrir.</h2>
+          <p class="section-intro">Escapadas con encanto, grandes aventuras y viajes pensados alrededor de lo que más te gusta. Tú eliges cómo quieres sentirte; nosotros damos forma al viaje.</p>
+        </div>
+
+        <div class="experience-grid">
+          <article class="experience-card">
+            <img src="https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?auto=format&fit=crop&w=900&q=85" alt="Paisaje tropical y naturaleza">
+            <div class="experience-text"><small>Desconexión</small><h3>Para bajar el ritmo</h3><p>Refugios especiales y paisajes que invitan a parar.</p></div>
+          </article>
+          <article class="experience-card">
+            <img src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=900&q=85" alt="Pueblo mediterráneo junto al mar">
+            <div class="experience-text"><small>Cultura y encanto</small><h3>Para dejarte llevar</h3><p>Destinos con carácter, gastronomía y pequeños descubrimientos.</p></div>
+          </article>
+          <article class="experience-card">
+            <img src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=900&q=85" alt="Paisaje de safari africano">
+            <div class="experience-text"><small>Aventura</small><h3>Para vivir algo único</h3><p>Experiencias extraordinarias, cuidadas hasta el último detalle.</p></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="about" id="nosotros">
+      <div class="container about-grid">
+        <div class="about-image" role="img" aria-label="Paisaje de playa y mar en un destino de vacaciones"></div>
+        <div class="about-copy">
+          <p class="eyebrow">Más que organizar viajes</p>
+          <h2>Tu tiempo es para disfrutar. Del resto, nos ocupamos.</h2>
+          <p>
+            En Moments creemos que viajar empieza mucho antes de hacer la maleta.
+            Por eso escuchamos lo que buscas, conocemos tus preferencias y diseñamos
+            una experiencia a tu medida, sin que tengas que invertir horas comparando,
+            buscando y organizando.
+          </p>
+          <p>
+            Desde la primera idea hasta los pequeños detalles del itinerario,
+            tienes a alguien cuidando de tu viaje.
+          </p>
+          <a class="text-link" href="#como-funciona">Conoce nuestra forma de trabajar <span>→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="process" id="como-funciona">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Así de sencillo</p>
+          <h2>Un viaje hecho para ti. Sin complicarte.</h2>
+          <p class="section-intro">Un proceso cercano y sencillo para transformar tus ganas de viajar en una experiencia cuidada de principio a fin.</p>
+        </div>
+        <div class="steps">
+          <article class="step">
+            <span class="step-number">01</span>
+            <h3>Nos cuentas tu idea</h3>
+            <p>Nos hablas de tus preferencias, fechas, presupuesto y de cómo te gustaría vivir el viaje.</p>
+          </article>
+          <article class="step">
+            <span class="step-number">02</span>
+            <h3>Diseñamos tu viaje</h3>
+            <p>Preparamos una propuesta personalizada con destinos, alojamientos y experiencias seleccionadas.</p>
+          </article>
+          <article class="step">
+            <span class="step-number">03</span>
+            <h3>Tú solo disfrutas</h3>
+            <p>Con todo organizado y cada detalle cuidado, solo queda empezar a vivirlo.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="closing">
+      <div class="container">
+        <p class="eyebrow">Tu próximo momento empieza aquí</p>
+        <h2>¿Y si este año viajas sin tener que organizarlo todo?</h2>
+        <p>Cuéntanos qué tienes en mente. Puedes escribirnos por email o enviarnos un mensaje por Instagram. Nosotros nos encargamos de convertirlo en un viaje a tu medida.</p>
+        <div class="contact-options">
+          <a class="button" href="mailto:momentsviajes@gmai.com?subject=Quiero%20planificar%20un%20viaje">Escríbenos por email <span>↗</span></a>
+          <a class="button button-outline" href="https://www.instagram.com/momentsviajes/" target="_blank" rel="noopener noreferrer">Háblanos por Instagram <span>↗</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <div class="footer-brand">MOMENTS<small>VIAJES A MEDIDA</small></div>
+      <p>© <span id="year"></span> Moments Viajes. Todos los derechos reservados.</p>
+      <div class="footer-contact">
+        <a href="https://www.instagram.com/momentsviajes/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="mailto:momentsviajes@gmai.com">momentsviajes@gmai.com</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const menuToggle = document.getElementById("menuToggle");
+    const mainNav = document.getElementById("mainNav");
+
+    menuToggle.addEventListener("click", () => {
+      const isOpen = mainNav.classList.toggle("open");
+      menuToggle.setAttribute("aria-expanded", String(isOpen));
+      menuToggle.setAttribute("aria-label", isOpen ? "Cerrar menú" : "Abrir menú");
+      menuToggle.textContent = isOpen ? "×" : "☰";
+    });
+
+    mainNav.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", () => {
+        mainNav.classList.remove("open");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.textContent = "☰";
+      });
+    });
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
